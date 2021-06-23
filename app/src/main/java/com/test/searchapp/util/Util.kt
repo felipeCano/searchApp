@@ -31,7 +31,7 @@ object Util {
 
     fun retrofitProvider(okHttpClient: OkHttpClient, gson: Gson): ApiSearch {
         return Retrofit.Builder()
-            .baseUrl("https://api.mercadolibre.com/sites/")
+            .baseUrl("https://api.mercadolibre.com/products/")
             .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
             .client(okHttpClient)
             .addConverterFactory(GsonConverterFactory.create(gson))

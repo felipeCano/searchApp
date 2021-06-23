@@ -33,7 +33,7 @@ abstract class BaseFragment : Fragment() {
         gosn = Util.gsonProvider()
         okHttpClient = Util.okHttpClientProvider()
         retrofit = Util.retrofitProvider(okHttpClient, gosn)
-       // searchDataBase = Util.dataBaseProvider(requireContext())
+        searchDataBase = Util.dataBaseProvider(requireContext())
         onFinishedViewLoad()
     }
 
