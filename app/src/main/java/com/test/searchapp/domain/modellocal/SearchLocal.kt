@@ -9,6 +9,6 @@ import com.google.gson.annotations.SerializedName
 data class SearchLocal(
     @PrimaryKey
     val id: String,
-    @SerializedName("domain_id")
+    @SerializedName("name")
     val originalName: String,
 )

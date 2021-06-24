@@ -11,7 +11,7 @@ import com.test.searchapp.domain.modellocal.SearchLocal
 import kotlinx.android.synthetic.main.adapter_search.view.*
 import java.util.*
 
-class SearchAdapter(var myDataset : List<SearchLocal>) :
+class SearchAdapter(var myDataset: List<SearchLocal>) :
 RecyclerView.Adapter<SearchAdapter.SearchHolder>(){
 
     var detailSearch : DetailSearchInterface? = null
@@ -67,6 +67,11 @@ RecyclerView.Adapter<SearchAdapter.SearchHolder>(){
 
     fun onDetailsSearch(detailSearchInterface: DetailSearchInterface){
         this.detailSearch = detailSearchInterface
+    }
+
+    fun filterList(filterdNames: ArrayList<SearchLocal>) {
+        this.myDataset = filterdNames
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int = myDataset.size
