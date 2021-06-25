@@ -10,6 +10,7 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.google.gson.Gson
 import com.test.searchapp.data.api.ApiSearch
+import com.test.searchapp.data.db.DetailProductDao
 import com.test.searchapp.data.db.SearchDao
 import com.test.searchapp.data.db.SearchDataBase
 import com.test.searchapp.util.Util
@@ -21,6 +22,7 @@ abstract class BaseFragment : Fragment() {
     protected lateinit var retrofit: ApiSearch
     protected lateinit var gosn: Gson
     protected lateinit var searchDao: SearchDao
+    protected lateinit var detailDao: DetailProductDao
     protected lateinit var searchDataBase: SearchDataBase
 
     override fun onCreateView(

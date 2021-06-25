@@ -1,4 +1,4 @@
-package com.test.searchapp.ui
+package com.test.searchapp.ui.adapter
 
 import android.view.LayoutInflater
 import android.view.View
@@ -8,6 +8,7 @@ import android.view.animation.ScaleAnimation
 import androidx.recyclerview.widget.RecyclerView
 import com.test.searchapp.R
 import com.test.searchapp.domain.modellocal.SearchLocal
+import com.test.searchapp.ui.interfaces.DetailSearchInterface
 import kotlinx.android.synthetic.main.adapter_search.view.*
 import java.util.*
 

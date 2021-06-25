@@ -4,6 +4,7 @@ import com.google.gson.JsonElement
 import io.reactivex.Observable
 import retrofit2.http.GET
 import retrofit2.http.Headers
+import retrofit2.http.Path
 import retrofit2.http.Query
 
 const val ACCEPT_TOKEN: String = "Accept: application/json"
@@ -26,4 +27,10 @@ interface ApiSearch {
         @Query("domain_id") domain_id: String = DOMAIN_ID,
     ): Observable<JsonElement>
 
+
+    @Headers(ACCEPT_TOKEN, CONTENT_TYPE)
+    @GET("{PRODUCT_ID}")
+    fun getDetailProduct(
+        @Path("PRODUCT_ID") producId: String,
+    ): Observable<JsonElement>
 }
