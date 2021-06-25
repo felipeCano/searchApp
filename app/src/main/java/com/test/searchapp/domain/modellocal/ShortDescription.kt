@@ -1,5 +1,12 @@
 package com.test.searchapp.domain.modellocal
 
-data class ShortDescription (
-    var content : String
-)
+import androidx.room.Ignore
+
+class ShortDescription() {
+    var content: String? = ""
+
+    @Ignore
+    constructor(content: String) : this() {
+        this.content = content
+    }
+}

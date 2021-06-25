@@ -2,8 +2,8 @@ package com.test.searchapp.domain.modellocal
 
 import androidx.room.PrimaryKey
 
-data class PictureProduct(
+class PictureProduct(
     @PrimaryKey
-    val product_id: Int,
-    val thumbnail: String
+    var product_id: String,
+    var thumbnail: String
 )

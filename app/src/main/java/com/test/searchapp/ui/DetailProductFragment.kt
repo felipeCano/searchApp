@@ -33,12 +33,22 @@ class DetailProductFragment  : BaseFragment() {
 
     fun initViewDetailSerie(detailProductModel: DetailProductModel){
         titleDetail.text = detailProductModel.name
+
+       /* detailProductModel.pickers.forEach {pickers ->
+                pickers.products.forEach { product ->
+                    if (product.product_id.contentEquals(productId)) {
+                        Picasso.get()
+                            .load(product.thumbnail)
+                            .resize(600, 800)
+                            .centerCrop()
+                            .into(imageDetail)
+                    }
+                }
+
+        }*/
+
         overrideDetail.text = detailProductModel.short_description!!.content
-      /*  Picasso.get()
-            .load( detailProductModel.pickers[0].thumbnail)
-            .resize(600, 800)
-            .centerCrop()
-            .into(imageDetail)*/
+
     }
 
     var viewDetails = Observer<DetailProductModel> { detailProductModel ->
